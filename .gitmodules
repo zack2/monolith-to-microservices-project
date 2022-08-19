@@ -1,0 +1,3 @@
+[submodule "udagram-api-user"]
+	path = udagram-api-user
+	url = https://github.com/zack2/cd0354-monolith-to-microservices-project.git
