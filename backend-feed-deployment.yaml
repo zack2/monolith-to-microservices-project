@@ -2,12 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: udagram-api-feed
-  name: udagram-api-feed
+    service: backend-feed
+  name: backend-feed
 spec:
   selector:
     matchLabels:
-      service: udagram-api-feed
+      service: backend-feed
   replicas: 3
   strategy:
     rollingUpdate:
@@ -20,8 +20,8 @@ spec:
         service: udagram-api-feed
     spec:
       containers:
-        - image: zackolivier/udagram-api-feed:v3
-          name: udagram-api-feed
+        - image: zackolivier/udagram-api-feed:v2
+          name: backend-feed
           imagePullPolicy: Always
           resources:
             requests:
@@ -65,7 +65,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: env-config
-                  key: POSTGRESS_HOST
+                  key: POSTGRES_HOST
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:

@@ -2,12 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: udagram-api-user
-  name: udagram-api-user
+    service: backend-user
+  name: backend-user
 spec:
   selector:
     matchLabels:
-      service: udagram-api-user
+      service: backend-user
   replicas: 2
   strategy:
     rollingUpdate:
@@ -17,11 +17,11 @@ spec:
   template:
     metadata:
       labels:
-        service: udagram-api-user
+        service: backend-user
     spec:
       containers:
-        - image: zackolivier/udagram-api-user:v1
-          name: udagram-api-user
+        - image: zackolivier/udagram-api-user:v2
+          name: backend-user
           imagePullPolicy: Always
           resources:
             requests:
@@ -45,12 +45,12 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: env-config
-                  key: POSTGRESS_DB
-            - name: POSTGRESS_HOST
+                  key: POSTGRES_DB
+            - name: POSTGRES_HOST
               valueFrom:
                 configMapKeyRef:
                   name: env-config
-                  key: POSTGRESS_HOST
+                  key: POSTGRES_HOST
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:

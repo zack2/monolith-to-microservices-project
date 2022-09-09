@@ -5,8 +5,8 @@ data:
   AWS_PROFILE: zack
   AWS_REGION: us-east-1
   JWT_SECRET: test
-  POSTGRESS_DB: postgres
-  POSTGRESS_HOST: database-1.cp8mi2beal0c.us-east-1.rds.amazonaws.com
+  POSTGRES_DB: postgres
+  POSTGRES_HOST: database-1.cp8mi2beal0c.us-east-1.rds.amazonaws.com
   URL: http://localhost:8100
 metadata:
   name: env-config
