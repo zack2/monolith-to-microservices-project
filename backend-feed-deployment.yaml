@@ -17,10 +17,10 @@ spec:
   template:
     metadata:
       labels:
-        service: udagram-api-feed
+        service: backend-feed
     spec:
       containers:
-        - image: zackolivier/udagram-api-feed:v2
+        - image: zackolivier/udagram-api-feed:v4
           name: backend-feed
           imagePullPolicy: Always
           resources:
@@ -28,7 +28,7 @@ spec:
               memory: "64Mi"
               cpu: "250m"
             limits:
-              memory: "1024Mi"
+              memory: "512Mi"
               cpu: "500m"
           env:
             - name: URL

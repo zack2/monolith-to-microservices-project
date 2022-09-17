@@ -27,7 +27,7 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
     allowedHeaders: [
       'Origin', 'X-Requested-With',
       'Content-Type', 'Accept',
-      'X-Access-Token', 'Authorization',
+      'X-Access-Token', 'Authorization','Access-Control-Allow-Origin'
     ],
     methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
     preflightContinue: true,
