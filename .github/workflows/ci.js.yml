@@ -25,3 +25,4 @@ jobs:
       - run: docker push zackolivier/udagram-api-user:v1
       - run: docker push zackolivier/udagram-api-feed:v1
       - run: docker push zackolivier/udagram-frontend:v2
+      
