@@ -9,4 +9,4 @@ data:
   POSTGRES_HOST: database-1.cp8mi2beal0c.us-east-1.rds.amazonaws.com
   URL: http://localhost:8100
 metadata:
-  name: env-config
+  name: env-configmap
