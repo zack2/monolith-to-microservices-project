@@ -26,8 +26,8 @@ kubectl get svc
 kubectl get pods
 
 kubectl create -f backend-feed-hpa
-kubectl autoscale deployment backend-feed --cpu-percent=50 --min=3 --max=7
-kubectl autoscale deployment backend-user --cpu-percent=50 --min=3 --max=7
+kubectl autoscale deployment backend-feed --cpu-percent=50 --min=2 --max=7
+kubectl autoscale deployment backend-user --cpu-percent=50 --min=2 --max=7
 
 kubectl get hpa backend-feed-hpa
 
