@@ -25,5 +25,8 @@ kubectl get deployments
 kubectl get svc
 kubectl get pods
 
+kubectl autoscale deployment backend-feed --cpu-percent=50 --min=3 --max=10
+kubectl autoscale deployment backend-user --cpu-percent=50 --min=3 --max=10
+
 
 

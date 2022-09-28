@@ -31,3 +31,4 @@ spec:
         - name: aws-secret
           configMap:
             name: aws-secret
+      
